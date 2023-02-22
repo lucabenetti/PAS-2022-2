@@ -3,3 +3,6 @@
 ################################################################################
 
 /backend/.vs/PAS
+/backend/bin/Debug/net6.0
+/backend/obj/Debug/net6.0
+/backend/obj

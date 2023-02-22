@@ -1,0 +1,26 @@
+﻿version: '3.8'
+
+services:
+  pas.api:
+    container_name: pas-api
+    image: pas-api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_URLS=http://+:5208
+    ports:
+      - 7208:7208
+      - 5208:5208
+    depends_on:
+      - postgres
+  
+  postgres:
+    container_name: cs-postgres
+    image: postgres:latest
+    hostname: localhost
+    ports:
+        - 5432:5432
+    environment:
+        - POSTGRES_PASSWORD=master
