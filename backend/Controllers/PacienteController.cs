@@ -16,10 +16,10 @@ namespace PAS.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<PacienteResponseModel>? Get()
+        public ActionResult Get()
         {
             var pacientes = _dbContext.Pacientes.ToList();
-            return pacientes?.Select(p => new PacienteResponseModel(p));
+            return Ok(pacientes?.Select(p => new PacienteResponseModel(p)));
         }
 
         [HttpPut]
@@ -39,6 +39,7 @@ namespace PAS.Controllers
 
                 _dbContext.Update(paciente);
                 _dbContext.SaveChanges();
+                return;
             }
 
             var ultimoPaciente = _dbContext.Pacientes.OrderByDescending(x => x.Id).FirstOrDefault();

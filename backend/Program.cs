@@ -24,7 +24,10 @@ using (var scope = app.Services.CreateScope())
     dataContext.Database.Migrate();
 }
 
-app.UseCors();
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseSwagger();
 app.UseSwaggerUI();
