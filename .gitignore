@@ -11,4 +11,6 @@
 /frontend/.vs/ProjectEvaluation
 /frontend/bin/Debug/net6.0
 /frontend/obj/Debug/net6.0
+/frontend/bin/Release/net6.0
+/frontend/obj/Release/net6.0
 /frontend/obj
