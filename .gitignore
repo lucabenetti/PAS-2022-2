@@ -6,3 +6,8 @@
 /backend/bin/Debug/net6.0
 /backend/obj/Debug/net6.0
 /backend/obj
+
+/frontend/.vs/AvatarBabylon
+/frontend/bin/Debug/net6.0
+/frontend/obj/Debug/net6.0
+/frontend/obj
