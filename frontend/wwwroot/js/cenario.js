@@ -234,7 +234,7 @@ const crieCena = async function (engine, paciente) {
         batimentos += 1;
         await criePainelInformacoes(scene, paciente, 2, 1, gereBatimentosCardiacos())
     }, 1000);
-    //await createPanelFichaMedica(scene, { "nome": 'Ficha medica', "idade": '120 BPM', 'situacao': 'Morto' }, -2, 1);
+    
     const xrHelper = await scene.createDefaultXRExperienceAsync();
 
     const featuresManager = xrHelper.baseExperience.featuresManager;
